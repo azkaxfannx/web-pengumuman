@@ -18,10 +18,18 @@
     <div class="flex flex-col items-center justify-center">
         <img src="asset/Logo Protic.webp" class="m-5 size-40 animate-melayang" alt="protic_pnc">
         <h1 style="color:white; font-size:200%; padding-bottom: 1%; padding-top: 1%;">WEB PENGUMUMAN PROTIC</h1>
-        <form id="npmForm" class="mt-5">
-            <input type="number" id="npmInput" placeholder="Masukkan NPM" class="px-4 py-2 rounded-l-lg focus:outline-none">
-            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-r-lg">Cek Hasil</button>
-        </form>
+        <form form id="npmForm" class="mt-5">
+        <div data-aos="zoom-in-right" data-aos-delay="500"   class="flex flex-col mb-4 min-w-1 bg-white p-2 rounded shadow-md border-2 border-gray-100 ">
+            <label class="text-gray-900 font-semibold after:content-['*'] after:text-red-600 after:ml-1" for="nama">Nama Lengkap</label>
+            <input type="number" id="npmInput" placeholder="Masukkan NPM" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
+            <button
+                type="submit"
+                class="bg-sedang_protic text-white font-semibold rounded p-2 mt-4 w-84 md:w-128 transition transform hover:bg-hijau_protic hover:scale-105 hover:shadow-lg active:scale-95 focus:outline-none focus:ring-4 focus:ring-white" 
+                id="submit">
+                Kirim
+            </button>
+        </div>
+    </form>
     </div> 
     </div>
 
