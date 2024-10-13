@@ -35,7 +35,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
 const dataHasil = {
-    "230202004": { nama: "Azka Syams Maulana", status: "diterima" },
+    "230202004": { nama: "Azka Syams Maulana", divisi: "Web", status: "diterima" },
     // bla bla bla bla bla bla bla bla bla bla
     "230202001": { nama: "Hendra Satria Yuda Pratama", status: "tidak diterima" },
     // bla bla bla bla bla bla bla bla bla bla
@@ -50,7 +50,7 @@ document.getElementById('npmForm').addEventListener('submit', function(e) {
         if (hasil.status === "diterima") {
             Swal.fire({
                 title: `Selamat, ${hasil.nama} (NPM: ${npm})!`,
-                text: `Kamu diterima di PROTIC!`,
+                text: `Kamu diterima di PROTIC pada divisi ${hasil.divisi}`,
                 icon: 'success'
             });
         } else {
