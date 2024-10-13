@@ -36,6 +36,8 @@
 <script>
 const dataHasil = {
     "230202004": { nama: "Azka Syams Maulana", divisi: "Web", status: "diterima" },
+    "230202005": { nama: "Bikra Abna", divisi: "Bendahara", status: "diterima" },
+    "230202006": { nama: "Alfito Dwi", divisi: "Sekretaris", status: "diterima" },
     // bla bla bla bla bla bla bla bla bla bla
     "230202001": { nama: "Hendra Satria Yuda Pratama", status: "tidak diterima" },
     // bla bla bla bla bla bla bla bla bla bla
@@ -48,11 +50,19 @@ document.getElementById('npmForm').addEventListener('submit', function(e) {
 
     if (hasil) {
         if (hasil.status === "diterima") {
-            Swal.fire({
+            if (hasil.divisi === "Sekretaris" || hasil.divisi === "Bendahara") {
+                Swal.fire({
                 title: `Selamat, ${hasil.nama} (NPM: ${npm})!`,
-                text: `Kamu diterima di PROTIC pada divisi ${hasil.divisi}`,
+                text: `Kamu diterima di PROTIC sebagai ${hasil.divisi}!`,
                 icon: 'success'
             });
+            } else {
+                Swal.fire({
+                title: `Selamat, ${hasil.nama} (NPM: ${npm})!`,
+                text: `Kamu diterima di PROTIC pada divisi ${hasil.divisi}!`,
+                icon: 'success'
+            });
+            }
         } else {
             Swal.fire({
                 title: `Mohon Maaf, ${hasil.nama} (NPM: ${npm}).`,
